@@ -1,0 +1,260 @@
+body {
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #252527;
+  color: #fafafa;
+}
+
+p {
+  text-align: center;
+  transition: all 0.3s ease-in;
+}
+
+h1 {
+  color: #cc6055;
+  font-size: 2.5em;
+  text-align: center;
+  transition: all 5s ease-in;
+}
+
+.inset-text {
+    color: rgba(204,96,85, 1);
+    text-shadow: 1px 4px 6px #111, 0 0 0 #000, 1px 4px 6px #111;
+}
+
+::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+::selection { background: #5af; color: #fff; text-shadow: none; }
+
+h2 {
+  margin:0 0 .5em 0;
+  color: #81E058;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+  transition: all 0.1s linear;
+}
+  a:hover {
+    color: #cc6055;
+  }
+
+#wrapper {
+  padding: 2%;
+  padding-left:312px;
+  position:relative;
+  margin: 3%;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.1),inset 0 2px 1px #000;
+  background: #222222;
+}
+
+#userList {
+  margin:0 0 30px 0;
+  color: #252527;
+}
+  #userList table {
+    border-collapse:separate;
+    border-spacing:1px;
+    background:#222222;
+  }
+    #userList table th {
+      background: #222222;
+      color: #CCC;
+      font-weight:600;
+      padding:10px 20px;
+      text-align:center;
+    }
+    #userList table tbody {
+      padding:0; margin:0;
+      border-collapse:collapse;
+      border-spacing:0px;
+    }
+      #userList table td {
+        background:#222222;
+        color: #CCC;
+        padding:5px 10px;
+        text-align:center;
+      }
+
+.userInfo {
+  width: 250px;
+  position: absolute;
+  top: 50px; left: 4%;
+  overflow: hidden;
+  color: #CCC;
+}
+  .userInfo p {
+    width: 200px;
+    padding:15px;
+    box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px, rgb(0, 0, 0) 0px 2px 1px inset;
+    background:rgba(80,120,255,0.05);
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transition : all 0.3s ease-in-out;
+  }
+  .userInfoShort {
+    width: 10px;
+    transition : all 0.3s ease-in-out;
+  }
+
+#addUser {
+  width: 50%;
+}
+  #addUser input {
+    padding: 0.5em;
+    margin: 5px;
+    width: 40%;
+    box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px, rgb(0, 0, 0) 0px 2px 1px inset;
+    background: rgba(80,120,255,0.05);
+    border: none;
+    color: #CCC;
+  }
+  #btnAddUser {
+    margin-top: 10px;
+    background: #3498db;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+fieldset {
+  border:0;
+  padding:0; margin:0;
+}
+
+.a-btn {
+  background: rgba(80,120,255,0.05);
+  padding-left: 20px;
+  padding-right: 70px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  color: #cc6055;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.1),inset 0 2px 1px #000;
+  border-radius: 20px;
+  float: left;
+  clear: both;
+  margin: 10px 0px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+  .a-btn-text {
+    padding-top: 8px;
+    display: block;
+    white-space: nowrap;
+    transition: all 0.2s linear;
+  }
+    .a-btn-text-red {
+      color: #cc6055;
+    }
+  .a-btn-slide-text{
+      position:absolute;
+      height: 100%;
+      top: 0px;
+      right: 52px;
+      /*padding-right: 10px;*/
+      width: 0px;
+      background: #222222;
+      text-shadow: 0px -1px 1px #363f49;
+      color: #CCC;
+      font-size: 18px;
+      white-space: nowrap;
+      text-align: left;
+      text-indent: 10px;
+      overflow: hidden;
+      line-height: 33px;
+      box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px, rgb(0, 0, 0) 0px 2px 1px inset;
+      transition: width 0.3s linear;
+  }
+  .a-btn-icon-right{
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      width: 52px;
+      box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px, rgb(0, 0, 0) 0px 2px 1px inset;
+
+  }
+    .a-btn-icon-right span{
+        width: 38px;
+        height: 38px;
+        opacity: 0.7;
+        position: absolute;
+        left: 50%;
+        top: 54%;
+        margin: -20px 0px 0px -20px;
+        background: transparent url(/images/arrow.png) no-repeat 50% 55%;
+        transition: all 0.3s linear;
+        transform: rotate(0deg);
+    }
+
+.a-btn:hover{
+    padding-right: 140px;
+}
+  .a-btn:hover .a-btn-slide-text{
+      width: 70px;
+  }
+    .a-btn:hover .a-btn-icon-right span{
+        opacity: 1;
+        top: 60%;
+        transform: rotate(180deg);
+    }
+
+.a-btn:active {
+    position: relative;
+    top: 0px;
+    background: #5d81ab;
+    border-color: #80a9da;
+}
+
+#userProjects {
+  position: absolute;
+  top: 50px;
+  left: 66%;
+}
+  .userProject h3{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #cc6055;
+  }
+    .project {
+      width: 90%;
+      box-shadow: 1px 4px 6px #000, 0 0 0 #000, 1px 4px 6px #000;
+      z-index: 1;
+      transition: all 0.3s linear;
+    }
+      .project-opacity {
+        opacity: 0.4;
+        transition: all 0.3s linear;
+      }
+    .projectText-underline {
+      width: 75%;
+      position: absolute;
+      height: 0.5%;
+      left: 7%;
+      top: 35%;
+      background: #ccc;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+    }
+      .p-project {
+        color: #252527;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+        .p-opacity {
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+        }
+      .projectText-underline-show {
+        height: 20%;
+        top: 40%;
+        opacity: 0.8;
+        transition: all 0.3s ease-in-out;
+      }
+
+
