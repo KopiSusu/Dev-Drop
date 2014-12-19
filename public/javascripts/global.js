@@ -15,7 +15,7 @@ $(document).ready(function() {
     $('#userList table tbody').on('click', 'td a.linkshowuser', showUserInfo);
 
     // Add User button click
-    $('#btnAddUser').on('click', addUser);
+    $('.a-btn').on('click', addUser);
 
     // Delete User link click
     $('#userList table tbody').on('click', 'td a.linkdeleteuser', deleteUser);
